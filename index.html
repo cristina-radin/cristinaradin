@@ -13,34 +13,41 @@
     header {
       background-color: #343a40;
       color: white;
-      padding: 50px 0;
+      padding: 20px 0;
       text-align: center;
     }
     header h1 {
       font-size: 2.5rem;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
+    .profile-section {
+      display: flex;
+      align-items: center;
+      padding: 40px 20px;
     }
-    .nav-link {
-      color: white !important;
-      font-weight: 500;
+    .profile-section img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .profile-section .info {
+      max-width: 600px;
     }
     .section-title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-top: 40px;
+      margin-bottom: 20px;
       color: #343a40;
     }
     section {
-      padding: 60px 20px;
+      padding: 20px;
     }
     footer {
       background-color: #343a40;
       color: white;
       text-align: center;
       padding: 20px 0;
-      margin-top: 20px;
+      margin-top: 40px;
     }
     footer a {
       color: #4CAF50;
@@ -54,43 +61,32 @@
 <body>
   <header>
     <h1>Tu Nombre</h1>
-    <p>Investigador | Científico | Educador</p>
+    <p>Investigador en [tu área]</p>
   </header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Inicio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#publications">Publicaciones</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-        </ul>
-      </div>
+  <div class="profile-section container">
+    <img src="https://via.placeholder.com/150" alt="Tu foto">
+    <div class="info">
+      <p>Soy un investigador apasionado por [tema de interés]. Trabajo actualmente en [institución] y me especializo en [tu campo]. Mi trabajo se centra en [breve descripción de tus objetivos].</p>
     </div>
-  </nav>
+  </div>
   <section id="about" class="bg-light">
+    <h2 class="section-title">Sobre mí</h2>
     <div class="container">
-      <h2 class="section-title">Sobre mí</h2>
-      <p>Soy un investigador apasionado por [tema de interés]. Trabajo actualmente en [institución] y mi objetivo es contribuir al avance de [campo científico].</p>
+      <p>Describe tu experiencia, formación académica y logros importantes.</p>
     </div>
   </section>
   <section id="publications">
+    <h2 class="section-title">Publicaciones</h2>
     <div class="container">
-      <h2 class="section-title">Publicaciones</h2>
       <ul>
-        <li><strong>Título 1:</strong> Descripción breve de tu artículo o libro. <a href="#">[Enlace]</a></li>
-        <li><strong>Título 2:</strong> Descripción breve de tu artículo o libro. <a href="#">[Enlace]</a></li>
+        <li><strong>Título 1:</strong> Descripción breve de tu artículo. <a href="#">[Enlace]</a></li>
+        <li><strong>Título 2:</strong> Descripción breve de tu artículo. <a href="#">[Enlace]</a></li>
       </ul>
     </div>
   </section>
   <section id="projects" class="bg-light">
+    <h2 class="section-title">Proyectos</h2>
     <div class="container">
-      <h2 class="section-title">Proyectos</h2>
-      <p>He trabajado en una variedad de proyectos, incluyendo:</p>
       <ul>
         <li><strong>Proyecto 1:</strong> Breve descripción del proyecto.</li>
         <li><strong>Proyecto 2:</strong> Breve descripción del proyecto.</li>
@@ -98,18 +94,18 @@
     </div>
   </section>
   <section id="contact">
+    <h2 class="section-title">Contacto</h2>
     <div class="container">
-      <h2 class="section-title">Contacto</h2>
-      <p>¿Tienes preguntas? Contáctame en:</p>
+      <p>¿Quieres ponerte en contacto conmigo? Encuéntrame en:</p>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:tuemail@example.com">tuemail@example.com</a></li>
         <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/tuusuario" target="_blank">github.com/tuusuario</a></li>
       </ul>
     </div>
   </section>
   <footer>
     <p>© 2024 Tu Nombre. Todos los derechos reservados.</p>
-    <p><a href="https://github.com/tuusuario">GitHub</a> | <a href="https://twitter.com/tuusuario">Twitter</a></p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
