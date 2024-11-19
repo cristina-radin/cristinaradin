@@ -3,18 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Presentations</title>
+  <title>Mi Página Principal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
-    a { text-decoration: none; color: blue; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    section {
+      padding: 20px;
+      margin: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
   </style>
 </head>
 <body>
-  <h1>Presentations</h1>
-  <ul>
-    <li><a href="presentation1.html">Presentation 1</a></li>
-    <li><a href="presentation2.html">Presentation 2</a></li>
-  </ul>
+<header class="bg-primary text-white text-center py-4">
+  <h1>Mi Nombre</h1>
+  <p>Bienvenido/a a mi página web</p>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Inicio</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="container my-5">
+  <h2>Sobre mí</h2>
+  <p>Aquí puedes añadir información sobre ti, tu trabajo o intereses.</p>
+</section>
+
+  </section>
+  <section id="projects">
+    <h2>Proyectos</h2>
+    <p>Aquí puedes listar tus proyectos con enlaces y descripciones.</p>
+  </section>
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p>Puedes añadir un formulario de contacto o simplemente una dirección de correo electrónico.</p>
+  </section>
+  <footer>
+    <p>© 2024 Mi Nombre. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
