@@ -38,12 +38,13 @@
       color: white; /* Texto blanco para contraste */
       height: 400px; /* Mantén la imagen de fondo amplia */
     }
-    .profile-section img {
-      width: 150px;
-      height: 150px;
+  .profile-section img {
+      width: auto; /* Ajusta automáticamente el ancho */
+      height: 200px; /* Establece una altura fija */
       border-radius: 50%;
-      margin-right: 30px; /* Mayor espacio entre la imagen y el texto */
-      border: 3px solid white; /* Resalta la foto */
+      margin-right: 30px;
+      border: 3px solid white;
+      object-fit: cover; /* Asegura que la imagen se recorte correctamente */
     }
     .profile-section .info {
       max-width: 600px;
