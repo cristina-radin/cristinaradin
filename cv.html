@@ -10,10 +10,15 @@
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
       color: #343a40;
+      background-image: url('https://images.unsplash.com/photo-1708305729900-906f34a7d49d?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
     }
   
     .navbar {
-      background-color: #343a40;
+      background-color: rgba(52, 58, 64, 0.85); /* Fondo oscuro semitransparente */
     }
   
     .navbar-brand {
@@ -31,27 +36,36 @@
     .navbar-nav .nav-link:hover {
       color: #4CAF50 !important;
     }
+
     .section-title {
       text-align: center;
       margin-top: 30px;
       margin-bottom: 30px;
+      color: white; /* Texto claro */
     }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.85); /* Fondo semitransparente */
+      border: none;
+    }
+
     footer {
-      background-color: #343a40;
+      background-color: rgba(52, 58, 64, 0.85); /* Fondo oscuro semitransparente */
       color: white;
       text-align: center;
       padding: 20px 0;
       margin-top: 40px;
     }
+
     footer a {
       color: #4CAF50;
       text-decoration: none;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
   </style>
-
 </head>
 <body>
   <!-- Cabecera / Navbar -->
@@ -72,20 +86,19 @@
       </div>
     </div>
   </nav>  
- 
 
   <!-- CV Section -->
   <section>
     <h2 class="section-title">Curriculum Vitae</h2>
     <div class="container">
-      <p class="text-center">Aquí puedes explorar mi experiencia profesional, formación académica y habilidades. También puedes descargar una copia en PDF:</p>
+      <p class="text-center text-white">Aquí puedes explorar mi experiencia profesional, formación académica y habilidades. También puedes descargar una copia en PDF:</p>
       <div class="text-center mb-4">
         <a href="CV_Cristina_Radin.pdf" download class="btn btn-success">Descargar CV en PDF</a>
       </div>
       <div class="row">
         <!-- Experiencia laboral -->
         <div class="col-md-4">
-          <div class="card bg-light mb-3">
+          <div class="card mb-3">
             <div class="card-header">Experiencia laboral</div>
             <div class="card-body">
               <p><strong>Investigador postdoctoral:</strong> Universidad de les Illes Balears (2023-2024).</p>
@@ -95,7 +108,7 @@
         </div>
         <!-- Educación -->
         <div class="col-md-4">
-          <div class="card bg-light mb-3">
+          <div class="card mb-3">
             <div class="card-header">Educación</div>
             <div class="card-body">
               <p><strong>Doctorado:</strong> Ciencias Climáticas, Universidad de Valencia, 2024.</p>
@@ -105,7 +118,7 @@
         </div>
         <!-- Habilidades -->
         <div class="col-md-4">
-          <div class="card bg-light mb-3">
+          <div class="card mb-3">
             <div class="card-header">Habilidades</div>
             <div class="card-body">
               <ul>
