@@ -106,37 +106,41 @@
   }
 
   /* Diseño de publicaciones */
-  .publication-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-          align-items: center;
-      justify-content: center;
-  }
 
-  .publication-item h5 {
-    margin-bottom: 5px;
-    margin-left: 20px;
-          align-items: center;
-      justify-content: center;
+    /* Estilos para las publicaciones */
+.publication-year {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra las publicaciones */
+}
 
-  }
+/* Diseño de publicaciones */
+.publication-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centra el contenido de cada publicación */
+  align-items: center; /* Centra las imágenes y texto */
+  margin-bottom: 20px;
+}
 
-  .publication-item p {
-    margin: 10px;
-    margin-left: 20px;
-    font-size: 0.9rem;
-          align-items: center;
-      justify-content: center;
-  }
+.publication-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px; /* Separa la imagen del texto */
+}
 
-  .publication-item a {
-    margin-top: 10px;
-    margin-left: 20px;
-    display: inline-block;
-          align-items: center;
-      justify-content: center;
-  }
+.publication-item h5, .publication-item p, .publication-item a {
+  margin: 0; /* Elimina márgenes extra */
+  text-align: center; /* Centra el texto */
+}
+
+.publication-item a {
+  margin-top: 10px;
+  text-align: center; /* Centra el botón */
+}
+
 
   .publication-item a:hover {
     color: white !important;
@@ -208,22 +212,21 @@
 <section id="publications" class="bg-light">
   <div class="container">
     <h2 class="section-title">Publications</h2>
-    <div class="row">
+    <div class="row justify-content-center">
       <!-- Columna para las publicaciones -->
       <div class="col-md-9">
-        
-     <div class="publication-year">
-  <h4 class="publication-year-title">2024</h4>
-  <div class="publication-item d-flex mb-4">
-    <img src="https://via.placeholder.com/100" alt="Publication 1" class="me-3 rounded">
-    <div>
-      <h5><strong>Towards Resilient Coastal Management: Supervised Learning for Seasonal to Multi-Year Water Level Predictions in Texas Gulf Coast.</strong></h5>
-      <p> Vicens-Miquel, M., et al.  <span class="text-muted">Under Review.</span></p>
-      <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
-    </div>
-  </div>
-</div>
-
+        <!-- Año 2024 -->
+        <div class="publication-year">
+          <h4 class="publication-year-title">2024</h4>
+          <div class="publication-item d-flex mb-4">
+            <img src="https://via.placeholder.com/100" alt="Publication 1" class="me-3 rounded">
+            <div>
+              <h5><strong>Towards Resilient Coastal Management: Supervised Learning for Seasonal to Multi-Year Water Level Predictions in Texas Gulf Coast.</strong></h5>
+              <p> Vicens-Miquel, M., et al.  <span class="text-muted">Under Review.</span></p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+            </div>
+          </div>
+        </div>
 
         <!-- Año 2023 -->
         <div class="publication-year">
@@ -281,6 +284,7 @@
     </div>
   </div>
 </section>
+
 
 
 
