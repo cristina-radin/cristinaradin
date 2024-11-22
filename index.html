@@ -13,25 +13,36 @@
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
       color: #343a40;
+      padding-top: 70px; /* Ajusta este valor según la altura de tu .navbar */
+
     }
-    .navbar {
-      background-color: #343a40;
-      position: fixed
-    }
-    .navbar-brand {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: white !important;
-      position: fixed
-    }
-    .navbar-nav .nav-link {
-      color: white !important;
-      font-weight: 500;
-      margin-left: 10px;
-    }
-    .navbar-nav .nav-link:hover {
-      color: #4CAF50 !important;
-    }
+   .navbar {
+    background-color: #343a40;
+    position: fixed;
+    top: 0; /* Fija la barra en la parte superior */
+    left: 0; /* Asegura que se alinee al borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que quede por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade sombra para destacar */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white !important;
+    /* Elimina position: fixed para que no se comporte como un elemento independiente */
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4CAF50 !important;
+}
+
     .profile-section {
       display: flex;
       align-items: center;
