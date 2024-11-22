@@ -119,9 +119,8 @@
 .publication-item {
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Centra el contenido de cada publicación */
-  align-items: center; /* Centra las imágenes y texto */
-  margin-bottom: 20px;
+ justify-content: center; /* Centra el bloque completo */
+  text-align: justify; /* Justifica el texto dentro de la publicación */
 }
 
 .publication-item img {
@@ -133,15 +132,23 @@
 
 .publication-item h5, .publication-item p, .publication-item a {
   margin: 0; /* Elimina márgenes extra */
-  text-align: center; /* Centra el texto */
+  text-align: justify; /* Centra el texto */
+  max-width: 600px; /* Opcional: limita el ancho máximo */
+
 }
 
 .publication-item a {
   margin-top: 10px;
-  text-align: center; /* Centra el botón */
+  display: inline-block;
+  text-align: center;
+  align-self: center;
 }
 
-
+/* Centrado de la fila de publicaciones */
+.row {
+  display: flex;
+  justify-content: center;
+}
   .publication-item a:hover {
     color: white !important;
     background-color: #343a40 !important;
