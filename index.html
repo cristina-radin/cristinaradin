@@ -133,16 +133,10 @@
 .publication-item h5, .publication-item p, .publication-item a {
   margin: 0; /* Elimina márgenes extra */
   text-align: justify; /* Centra el texto */
-  max-width: 600px; /* Opcional: limita el ancho máximo */
+  max-width: 1000px; /* Opcional: limita el ancho máximo */
 
 }
 
-.publication-item a {
-  margin-top: 10px;
-  display: inline-block;
-  text-align: center;
-  align-self: center;
-}
 
 /* Centrado de la fila de publicaciones */
 .row {
@@ -168,6 +162,7 @@
 
   /* Cada grupo de publicaciones */
   .publication-year {
+   position: relative; /* Esto es necesario para posicionar el año */
     margin-bottom: 30px;
   }
   /* Efecto al pasar el ratón sobre el botón */
@@ -241,8 +236,8 @@
           <div class="publication-item d-flex mb-4">
             <img src="https://via.placeholder.com/100" alt="Publication 3" class="me-3 rounded">
             <div>
-              <h5><strong>Martinez-Amaya, J., et al. (2023)</strong></h5>
-              <p>Advanced Machine Learning Methods for Major Hurricane Forecasting. <span class="text-muted">Remote Sensing, 15(1).</span></p>
+              <h5><strong>Advanced Machine Learning Methods for Major Hurricane Forecasting.</strong></h5>
+              <p> Martinez-Amaya, J., et al.  <span class="text-muted">Remote Sensing, 15(1).</span></p>
               <a href="https://doi.org/10.3390/rs15010119" class="btn btn-outline-primary btn-sm" target="_blank">Read More</a>
             </div>
           </div>
@@ -254,8 +249,8 @@
           <div class="publication-item d-flex mb-4">
             <img src="https://via.placeholder.com/100" alt="Publication 4" class="me-3 rounded">
             <div>
-              <h5><strong>Radin, C., et al. (2021)</strong></h5>
-              <p>Machine-Learning Based Reconstructions of Past Regional Sea Level Variability From Proxy Data. <span class="text-muted">Geophysical Research Letters, 48(23).</span></p>
+              <h5><strong>Machine-Learning Based Reconstructions of Past Regional Sea Level Variability From Proxy Data.</strong></h5>
+              <p> Radin, C., et al.  <span class="text-muted">Geophysical Research Letters, 48(23).</span></p>
               <a href="https://doi.org/10.1029/2021GL095382" class="btn btn-outline-primary btn-sm" target="_blank">Read More</a>
             </div>
           </div>
