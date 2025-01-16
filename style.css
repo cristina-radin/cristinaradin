@@ -185,22 +185,24 @@
     color: white !important;
     background-color: #343a40 !important;
   }
-  .open-to-work-banner {
-  background-color: #FFEB3B; /* Amarillo suave */
-  color: #333;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 0;
-  border-bottom: 3px solid #FFC107; /* Color un poco más oscuro para contraste */
-  position: relative;
-  top: -20px; /* Ajusta la posición según necesites */
-  width: 100%;
-}
 
-.profile-text {
-  margin-top: 30px; /* Asegura que el texto principal no se solape con el banner */
-  text-align: justify; /* Justifica el texto principal */
-  padding: 20px;
-}
+
+
+
+    .open-to-work {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px; /* Add margin to prevent overlapping */
+    }
+
+  .profile-content {
+    margin-top: 50px; /* Asegura que el contenido no se solape con la insignia */
+    text-align: justify; /* Justifica el texto principal */
+    padding: 20px;
+    position: relative;
+  }
+  
 
