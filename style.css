@@ -1,0 +1,206 @@
+    /* Estilos generales */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #343a40;
+      padding-top: 70px; /* Ajusta este valor según la altura de tu .navbar */
+      font-size: 0.9rem;
+      text-align: justify;
+
+
+    }
+   .navbar {
+    background-color: #343a40;
+    position: fixed;
+    top: 0; /* Fija la barra en la parte superior */
+    left: 0; /* Asegura que se alinee al borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que quede por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade sombra para destacar */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white !important;
+    /* Elimina position: fixed para que no se comporte como un elemento independiente */
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4CAF50 !important;
+}
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px 0px;
+      background-image: url('https://images.unsplash.com/photo-1708305729900-906f34a7d49d?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 400px;
+    }
+
+    .profile-section img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-right: 50px;
+      margin-left: 50px;
+      border: 3px solid white;
+      object-fit: cover;
+    }
+    .profile-section .info {
+      max-width: 600px;
+      text-align: justify;
+      font-size: 1.1rem;
+
+
+    }
+    .section-title {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    section.bg-dark {
+      background-color: #343a40;
+      color: white;
+      padding: 50px 20px;
+    }
+    section.bg-light {
+      background-color: #f8f9fa;
+      padding: 50px 20px;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    #contact a {
+      margin: 0 10px;
+      color: #343a40;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+    #contact a:hover {
+      color: #0066e1 !important;
+    }
+ /* Estilos para las publicaciones */
+
+  .years-links a {
+    color: #6c757d;  /* Gris más suave */
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;  /* Tamaño más pequeño */
+    font-weight: 500;
+  }
+
+  .years-links a:hover {
+    color: #0066e1;  /* Color azul al pasar el ratón */
+  }
+
+  /* Diseño de publicaciones */
+
+    /* Estilos para las publicaciones */
+.publication-year {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: right; /* Centra las publicaciones */
+
+}
+
+/* Diseño de publicaciones */
+.publication-item {
+  display: flex;
+  flex-direction: row;
+ justify-content: justify; /* Centra el bloque completo */
+  text-align: justify; /* Justifica el texto dentro de la publicación */
+ margin-left: 10px;
+
+}
+
+    .publication-item img {
+    width: 150px; /* Ajusta según el tamaño que quieras */
+    height: 120px; /* Mantén el tamaño cuadrado o proporcional */
+    object-fit: cover; /* Recorta y ajusta para mantener proporción */
+    border-radius: 5px; /* Redondeo opcional */
+    margin-right: 60px; /* Espaciado a la derecha de la imagen */
+}
+
+
+.publication-item h5, .publication-item p, .publication-item a {
+  margin: 0; /* Elimina márgenes extra */
+  text-align: justify; /* Centra el texto */
+  max-width: 650px; /* Opcional: limita el ancho máximo */
+  font-size: 0.9rem;
+}
+
+
+/* Centrado de la fila de publicaciones */
+.row {
+  display: flex;
+  justify-content: justify;
+}
+  .publication-item a:hover {
+    color: white !important;
+    background-color: #343a40 !important;
+          align-items: justify;
+      justify-content: justify;
+  }
+
+  /* Diseño del título de cada año */
+  .publication-year-title {
+    font-size: 1.1rem;
+    color: #5f6a6a;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: right; /* Alinea el texto a la derecha */
+
+  }
+
+  /* Cada grupo de publicaciones */
+  .publication-year {
+   position: relative; /* Esto es necesario para posicionar el año */
+    margin-bottom: 30px;
+  }
+  /* Efecto al pasar el ratón sobre el botón */
+  .publication-item a:hover {
+    color: white !important;
+    background-color: #343a40 !important;
+  }
+  .open-to-work-banner {
+  background-color: #FFEB3B; /* Amarillo suave */
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 3px solid #FFC107; /* Color un poco más oscuro para contraste */
+  position: relative;
+  top: -20px; /* Ajusta la posición según necesites */
+  width: 100%;
+}
+
+.profile-text {
+  margin-top: 30px; /* Asegura que el texto principal no se solape con el banner */
+  text-align: justify; /* Justifica el texto principal */
+  padding: 20px;
+}
+
