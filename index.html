@@ -11,8 +11,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
 
-
+<script src="code.js"></script>
 
 </head>
 <body>
@@ -30,7 +33,10 @@
           <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
           <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-        </ul>
+          <button id="theme-toggle" class="theme-button">
+            <i id="theme-icon" class="fas fa-sun"></i>
+          </button>
+                  </ul>
       </div>
     </div>
   </nav>
@@ -42,9 +48,8 @@
         <span>Open to Work! </span>
       </div>
       <p>   
-        My researchs interests inlclude:
-                Advanced statistical techniques to assess current and future states of the Earth’s climate system that identify potential
-              impacts under global warming. Use of machine learning to deal with human-related problems . 
+        Hello! I'm Cristina (Dr. Radin). My researchs interests can summarize into applying 
+                Advanced statistical techniques to assess current and future states of the Earth’s climate system. I am passionate about contributing to social and humanitarian causes, whether by applying machine learning to climate and migration challenges or by mentoring and supporting people on a smaller scale.
         </p>
    </div>
   </div>
@@ -52,11 +57,11 @@
   <section id="about" class="bg-dark">
     <h2 class="section-title">About me</h2>
     <div class="container">
-      <p>  I am a physicist and recently earned my PhD in remote sensing and data science at the Image Processing Laboratory, University of Valencia. I am passionate about applying programming and machine learning skills to address today's pressing issues. <br>
+      <p>  I am a physicist and I recently finished my PhD in remote sensing and data science at the Image Processing Laboratory, University of Valencia. I am passionate about applying programming and machine learning skills to solve real-world problems. <br>
         
         During my research, I developed innovative machine learning models to forecast and reconstruct sea level changes driven by internal climate variability. I analyzed large datasets, establishing relationships between open ocean temperature patterns at various depths (using in situ data) and coastal sea levels observed by satellites. Additionally, I explored the automatic identification of regional-scale climate variability using unsupervised machine learning techniques.<br>
         
-        Beyond my technical expertise, I consider myself an organized, motivated, and independent researcher, committed to continuous personal and professional growth. I value dynamic research environments, teamwork, and the exchange of ideas. 
+        Beyond my technical expertise, I consider myself an organized, motivated, and independent researcher, committed to continuous personal and professional growth. I value transparency, dynamic research environments, teamwork, and the exchange of ideas. 
 
         </p>
     </div>
@@ -185,17 +190,31 @@
 
 
 
-  <!-- Sección de noticias -->
-  <section id="news" class="bg-dark">
-    <h2 class="section-title">News</h2>
-    <div class="container">
-      <ul>
-        <li>Recent news.</li>
-      </ul>
+<!-- Sección de noticias -->
+<section id="news" class="bg-dark">
+  <div class="news-carousel">
+    <button class="carousel-btn prev" onclick="prevNews()">&#9664;</button>
+    <div class="news-container">
+      <div class="news-item active">
+        <img src="https://media.licdn.com/dms/image/v2/D4D22AQHvxMCW9bAmdg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1731493963678?e=1741824000&v=beta&t=XGPGnC0a_dIKN0if4qULGi_ng0BdNUYk5LhX0suzKfk" alt="News 1">
+        <h3>Doctoral Thesis</h3>
+      </div>
+      <div class="news-item next">
+        <img src="https://www.lavanguardia.com/files/image_990_484/uploads/2021/04/08/606f1e12f1755.jpeg" alt="News 3">
+        <h3>Headline 2</h3>
+      </div>
+      <div class="news-item hidden">
+        <img src="https://estaticos-cdn.prensaiberica.es/clip/b4152ad2-9ccd-41e8-8290-7442fa507d07_16-9-aspect-ratio_default_0.webp" alt="News 2">
+        <h3>Headline 3</h3>
+      </div>
     </div>
-  </section>
+    <button class="carousel-btn next" onclick="nextNews()">&#9654;</button>
+  </div>
+</section>
+
+
   <!-- Sección de contacto -->
-  <section id="contact">
+  <section id="contact" class="bg-light">
     <h2 class="section-title">Contact</h2>
     <div class="container text-center">
       <p>Reach out and say hello:</p>
@@ -215,4 +234,6 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
+
