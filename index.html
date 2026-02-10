@@ -18,6 +18,15 @@
 <script src="code.js"></script>
 
 </head>
+
+<script>
+fetch('https://api.countapi.xyz/hit/cristina-radin.github.io/cristinaradin/index.html#')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('visits').innerText = data.value;
+  });
+</script>
+
 <body>
   <!-- Cabecera / Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -49,18 +58,18 @@
       </div>
       <p>   -->
         Hello! I'm Cristina (Dr. Radin). 
-I am a data scientist with a background in climatology and ocean sciences, focused on assessing present and future states of the Earth’s climate system. I am particularly interested in translating complex scientific insights into responsible, socially relevant decisions. Alongside my technical work, I care deeply about mentoring, leadership, and supporting people within scientific and interdisciplinary teams.      </p>
+I am a remote sensing data scientist with a background in climatology and ocean sciences, focused on assessing present and future states of the Earth’s climate system. I am particularly interested in translating complex scientific insights into responsible, socially relevant decisions. Alongside my technical work, I care deeply about mentoring, leadership, and supporting people within scientific and interdisciplinary teams.      </p>
    </div>
   </div>
   <!-- Sección About Me -->
   <section id="about" class="bg-dark">
     <h2 class="section-title">About me</h2>
     <div class="container">
-      <p>  I am a physicist and I did my PhD in remote sensing and data science at the Image Processing Laboratory, University of Valencia. I am passionate about applying programming and machine learning skills to solve real-world problems. <br>
+      <p>  I am a physicist and I persued my PhD in remote sensing and data science at the Image Processing Laboratory, University of Valencia. I am passionate about applying programming and machine learning skills to solve real-world problems. <br>
         
         During my research, I developed innovative machine learning models to forecast and reconstruct sea level changes driven by internal climate variability. I analyzed large datasets, establishing relationships between open ocean temperature patterns at various depths (using in situ data) and coastal sea levels observed by satellites. Additionally, I explored the automatic identification of regional-scale climate variability using unsupervised machine learning techniques.<br>
         
-        Now I am involved in the <a href="https://ai4pex.org/">AI4PEX</a> project as a postdoc. Here, I'm identifying individual and compound ocean extreme events and their precursors from high-resolution Earth System Model simulations and Earth Observation-based fields through machine learning approaches.
+        Now I am involved in the <a href="https://ai4pex.org/" target="_blank" rel="noopener noreferrer">AI4PEX</a> project as a postdoc. Here, I'm identifying individual and compound ocean extreme events and their precursors from high-resolution Earth System Model simulations and Earth Observation-based fields through machine learning approaches.
 
         Beyond my technical expertise, I consider myself an organized, motivated, and independent researcher, committed to continuous personal and professional growth. I value honesty, transparency, dynamic research environments, teamwork, and the exchange of ideas. 
 
@@ -89,7 +98,7 @@ I am a data scientist with a background in climatology and ocean sciences, focus
               <h5><strong> Enhancing coastal resilience: AI-driven seasonal to multi-year water level predictions for the Texas Gulf Coast. </strong></h5>
               <p> M. Vicens-Miquel,  C. Radin, V. Nieves & P. E. Tissot <br>
               <span class="text-muted">Ocean & Coastal Management, 271.</span></p>
-              <a href="https://www.sciencedirect.com/science/article/pii/S0964569125004090" class="btn btn-outline-primary btn-sm">Read</a>
+              <a href="https://www.sciencedirect.com/science/article/pii/S0964569125004090" target="_blank"  class="btn btn-outline-primary btn-sm">Read</a>
             </div>
           </div>
 
@@ -103,7 +112,7 @@ I am a data scientist with a background in climatology and ocean sciences, focus
               <h5><strong> Harnessing Machine Learning to Decode the Mediterranean’s Climate Canvas and Forecast Sea Level Changes.</strong></h5>
               <p> C. Radin, V. Nieves, M. Vicens-Miquel & Jose Luis Alvarez-Morales <br> 
                 <span class="text-muted">Climate, 12(8), 127.</span></p>
-              <a href="https://www.mdpi.com/2225-1154/12/8/127" class="btn btn-outline-primary btn-sm" target="_blank">Read</a>
+              <a href="https://www.mdpi.com/2225-1154/12/8/127" target="_blank"  class="btn btn-outline-primary btn-sm" >Read</a>
             </div>
           </div>
 
@@ -114,7 +123,7 @@ I am a data scientist with a background in climatology and ocean sciences, focus
               <h5><strong> Unveiling Regional Climate Patterns Through Global Subsurface Ocean Temperature Data: An AI Multi-Layer Analysis Framework.</strong></h5>
               <p> C. Radin & V. Nieves <br>
                 <span class="text-muted">Earth Systems and Environment, 8 (1673–1681).</span></p>
-              <a href="https://link.springer.com/article/10.1007/s41748-024-00409-w" class="btn btn-outline-primary btn-sm" target="_blank">Read</a>
+              <a href="https://link.springer.com/article/10.1007/s41748-024-00409-w" target="_blank" class="btn btn-outline-primary btn-sm">Read</a>
             </div>
           </div>
         </div>
@@ -203,15 +212,15 @@ I am a data scientist with a background in climatology and ocean sciences, focus
     <button class="carousel-btn prev" onclick="prevNews()">&#9664;</button>
     <div class="news-container">
       <div class="news-item active">
-        <img src="https://media.licdn.com/dms/image/v2/D4D22AQHvxMCW9bAmdg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1731493963678?e=1741824000&v=beta&t=XGPGnC0a_dIKN0if4qULGi_ng0BdNUYk5LhX0suzKfk" alt="News 1">
+        <img src="https://raw.githubusercontent.com/cristina-radin/cristinaradin/main/images/thesis.png" alt="News 1">
         <h3>Doctoral Thesis</h3>
       </div>
       <div class="news-item next">
-        <img src="https://www.lavanguardia.com/files/image_990_484/uploads/2021/04/08/606f1e12f1755.jpeg" alt="News 3">
+        <img src="https://www.lavanguardia.com/files/image_990_484/uploads/2021/04/08/606f1e12f1755.jpeg" alt="News 2">
         <h3>Headline 2</h3>
       </div>
       <div class="news-item hidden">
-        <img src="https://estaticos-cdn.prensaiberica.es/clip/b4152ad2-9ccd-41e8-8290-7442fa507d07_16-9-aspect-ratio_default_0.webp" alt="News 2">
+        <img src="https://estaticos-cdn.prensaiberica.es/clip/b4152ad2-9ccd-41e8-8290-7442fa507d07_16-9-aspect-ratio_default_0.webp" alt="News 3">
         <h3>Headline 3</h3>
       </div>
     </div>
@@ -234,6 +243,8 @@ I am a data scientist with a background in climatology and ocean sciences, focus
       </div>
     </div>
   </section>
+  <p>Visits: <span id="visits">–</span></p>
+
   <!-- Pie de página -->
   <footer>
     <p>© 2024-2026 Cristina Radin. All rights reserved.</p>
