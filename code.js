@@ -36,34 +36,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const newsItems = document.querySelectorAll(".news-item");
-    let index = 0;
+const items = document.querySelectorAll('.news-item');
+const container = document.querySelector('.news-container');
+let current = 0;
 
-    function updateCarousel() {
-      newsItems.forEach((item, i) => {
-        item.classList.remove("active", "next", "prev", "hidden");
-        if (i === index) {
-          item.classList.add("active");
-        } else if (i === (index + 1) % newsItems.length) {
-          item.classList.add("next");
-        } else if (i === (index - 1 + newsItems.length) % newsItems.length) {
-          item.classList.add("prev");
-        } else {
-          item.classList.add("hidden");
-        }
-      });
-    }
+function updateCarousel() {
+  const itemWidth = items[0].offsetWidth + 20; // ancho + gap
+  const offset = -current * itemWidth + (container.parentElement.offsetWidth - itemWidth) / 2;
+  container.style.transform = `translateX(${offset}px)`;
 
-    document.querySelector(".carousel-btn.next").addEventListener("click", function() {
-      index = (index + 1) % newsItems.length;
-      updateCarousel();
-    });
-
-    document.querySelector(".carousel-btn.prev").addEventListener("click", function() {
-      index = (index - 1 + newsItems.length) % newsItems.length;
-      updateCarousel();
-    });
-
-    updateCarousel();
+  // marcar activo
+  items.forEach((item, i) => {
+    item.classList.toggle('active', i === current);
   });
+}
+
+function nextNews() {
+  current = (current + 1) % items.length;
+  updateCarousel();
+}
+
+function prevNews() {
+  current = (current - 1 + items.length) % items.length;
+  updateCarousel();
+}
+
+// inicializar
+updateCarousel();
+window.addEventListener('resize', updateCarousel); // mantiene centrado al redimensionar
+
+// conectar botones
+document.querySelector(".carousel-btn.next").addEventListener("click", nextNews);
+document.querySelector(".carousel-btn.prev").addEventListener("click", prevNews);
