@@ -50,9 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('resize', updateCarousel);
 
   updateCarousel(); // inicializar
-});
 
-items.forEach((item) => {
+  items.forEach((item) => {
   const url = item.dataset.url;   // link externo
   const page = item.dataset.page; // link interno
 
@@ -66,4 +65,7 @@ items.forEach((item) => {
     item.style.cursor = 'default'; // no clicable
   }
 });
+
+});
+
 
