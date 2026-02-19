@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Cargar tema guardado
   if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light-mode");
     themeIcon.classList.replace("fa-sun", "fa-moon");
@@ -42,10 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const itemWidth = items[0].offsetWidth + gap;
     const offset = -current * itemWidth + (container.parentElement.offsetWidth - itemWidth)/2;
     container.style.transform = `translateX(${offset}px)`;
-
-    items.forEach((item,i) => {
-      item.classList.toggle('active', i===current);
-    });
+    items.forEach((item,i) => item.classList.toggle('active', i===current));
   }
 
   nextBtn.onclick = () => { current = (current + 1) % items.length; updateCarousel(); };
@@ -53,6 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('resize', updateCarousel);
 
-  updateCarousel(); // inicializar carrusel
-
+  updateCarousel(); // inicializar
 });
