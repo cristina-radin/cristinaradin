@@ -51,3 +51,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateCarousel(); // inicializar
 });
+
+items.forEach((item) => {
+  const url = item.dataset.url;   // link externo
+  const page = item.dataset.page; // link interno
+
+  if (url || page) {
+    item.style.cursor = 'pointer';
+    item.onclick = () => {
+      if (url) window.open(url, "_blank");     // externo en otra pestaña
+      else if (page) window.location.href = page; // interno en la misma ventana
+    };
+  } else {
+    item.style.cursor = 'default'; // no clicable
+  }
+});
+
