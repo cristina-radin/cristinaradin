@@ -30,21 +30,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ========= NEWS CAROUSEL ========= */
 
+  window.addEventListener('load', function() {
+
   const items = document.querySelectorAll('.news-item');
   const container = document.querySelector('.news-container');
-
-  if (!items.length || !container) return; // evita errores si no existe
-
   let current = 0;
 
   function updateCarousel() {
-    const itemWidth = items[0].offsetWidth + 20;
-    const offset = -current * itemWidth + (container.parentElement.offsetWidth - itemWidth) / 2;
+    const gap = parseInt(getComputedStyle(container).gap) || 0;
+    const itemWidth = items[0].offsetWidth + gap;
+    const offset = -current * itemWidth + (container.parentElement.offsetWidth - itemWidth)/2;
     container.style.transform = `translateX(${offset}px)`;
-
-    items.forEach((item, i) => {
-      item.classList.toggle('active', i === current);
-    });
+    items.forEach((item,i)=>item.classList.toggle('active', i===current));
   }
 
   function nextNews() {
@@ -57,12 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
   }
 
-  document.querySelector(".carousel-btn.next")?.addEventListener("click", nextNews);
-  document.querySelector(".carousel-btn.prev")?.addEventListener("click", prevNews);
+  document.querySelector(".carousel-btn.next").addEventListener("click", nextNews);
+  document.querySelector(".carousel-btn.prev").addEventListener("click", prevNews);
 
   window.addEventListener('resize', updateCarousel);
 
-  // esperar a que carguen las imágenes
-  window.addEventListener("load", updateCarousel);
+  updateCarousel(); // inicializar
 
 });
