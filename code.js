@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ========= THEME TOGGLE ========= */
-
+  // ======== THEME TOGGLE ========
   const themeToggle = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
 
@@ -17,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Cargar tema guardado
   if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light-mode");
     themeIcon.classList.replace("fa-sun", "fa-moon");
@@ -28,9 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   themeToggle?.addEventListener("click", toggleTheme);
 
 
-  /* ========= NEWS CAROUSEL ========= */
-window.addEventListener('load', function() {
-
+  // ======== NEWS CAROUSEL ========
   const items = document.querySelectorAll('.news-item');
   const container = document.querySelector('.news-container');
   const nextBtn = document.querySelector(".carousel-btn.next");
@@ -45,12 +43,16 @@ window.addEventListener('load', function() {
     const offset = -current * itemWidth + (container.parentElement.offsetWidth - itemWidth)/2;
     container.style.transform = `translateX(${offset}px)`;
 
-    items.forEach((item,i)=>item.classList.toggle('active', i===current));
+    items.forEach((item,i) => {
+      item.classList.toggle('active', i===current);
+    });
   }
 
-  nextBtn.onclick = () => { current = (current+1) % items.length; updateCarousel(); };
-  prevBtn.onclick = () => { current = (current-1+items.length) % items.length; updateCarousel(); };
+  nextBtn.onclick = () => { current = (current + 1) % items.length; updateCarousel(); };
+  prevBtn.onclick = () => { current = (current - 1 + items.length) % items.length; updateCarousel(); };
 
   window.addEventListener('resize', updateCarousel);
-  updateCarousel();
+
+  updateCarousel(); // inicializar carrusel
+
 });
