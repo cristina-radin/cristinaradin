@@ -386,3 +386,36 @@ body.light-mode .theme-button:hover {
   width: 100%;
 }
 
+.carousel-btn {
+  position: absolute;        /* sobre el carrusel */
+  top: 50%;                  /* centradas verticalmente */
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5); /* semitransparente */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;              /* que quede encima de todo */
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* izquierda y derecha */
+.carousel-btn.prev {
+  left: 10px;  /* ajusta la distancia al carrusel */
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+
